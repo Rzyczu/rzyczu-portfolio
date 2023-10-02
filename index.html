@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./main.css">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+    <!--------- Nav --------->
+    <nav class="navbar sticky-top navbar-expand-xl navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span class="text-primary">&lt;</span>RZYCZU<span class="text-primary">&sol;&gt;</span>
+            </a>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#aboutMe">ABOUT ME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience">EXPERIENCE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#education">EDUCATION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">PROJECTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hobbies">HOBBIES</a>
+                        </li>
+                    </ul>
+                    <button class="ms-5 btn btn-outline-light" href="#contactMe">CONTACT ME</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--------- About me --------->
+    <section id="aboutMe" class=" bg-shapes pt-5 pb-5 bg-dark text-white">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+
+        <div class="container">
+            <div class="d-flex row d-grid gap-5">
+                <div class="col-lg-4 ">
+                    <img src="./assets/me_2_opacity.png" alt="Photo of me"
+                        class="img-responsive section-img rounded mb-2">
+                </div>
+                <div class="col-lg-7 d">
+                    <h1 class="mb-5 text-primary display-3">ABOUT ME</h1>
+                    <div class="mb-4">
+                        I have been studying Computer Science in Computer Engineering at the
+                        Politechnika Krakwska for a year now. During this time, I have also gained
+                        valuable work experience as a Junior Full Stack Developer for almost a year.
+                        Creating websites and apps is my passion. I am always eager to learn new
+                        technologies to enhance my skills in web development.
+                    </div>
+                    <div class="btn-group align-items-center" role="group" aria-label="LinkedIn link">
+                        <a role="button" class="btn btn-outline-dark border-0" target="_blank"
+                            href="https://www.linkedin.com/in/mrzyczniak/">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                viewBox="0 0 50 50" style="fill:#FFFFFF;">
+                                <path
+                                    d="M 8 3.0117188 C 6.3126093 3.0117188 4.8354789 3.4916328 3.7539062 4.3652344 C 2.6723337 5.238836 2.0117188 6.533218 2.0117188 7.9472656 C 2.0117188 10.690836 4.4687078 12.814467 7.7167969 12.941406 A 0.98809878 0.98809878 0 0 0 8 12.988281 C 9.753566 12.988281 11.246191 12.474267 12.3125 11.564453 C 13.378809 10.654639 13.988281 9.3429353 13.988281 7.9472656 A 0.98809878 0.98809878 0 0 0 13.986328 7.8925781 C 13.832307 5.1316834 11.374781 3.0117187 8 3.0117188 z M 8 4.9882812 C 10.60907 4.9882812 11.895883 6.2693448 12.005859 7.9726562 C 11.998759 8.8049335 11.676559 9.5118991 11.03125 10.0625 C 10.378809 10.619186 9.371434 11.011719 8 11.011719 C 5.3980542 11.011719 3.9882813 9.5991704 3.9882812 7.9472656 C 3.9882812 7.1213132 4.3276663 6.4422421 4.9960938 5.9023438 C 5.6645211 5.3624454 6.6873907 4.9882813 8 4.9882812 z M 3 15 A 1.0001 1.0001 0 0 0 2 16 L 2 45 A 1.0001 1.0001 0 0 0 3 46 L 13 46 A 1.0001 1.0001 0 0 0 14 45 L 14 35.664062 L 14 16 A 1.0001 1.0001 0 0 0 13 15 L 3 15 z M 18 15 A 1.0001 1.0001 0 0 0 17 16 L 17 45 A 1.0001 1.0001 0 0 0 18 46 L 28 46 A 1.0001 1.0001 0 0 0 29 45 L 29 29 L 29 28.75 L 29 28.5 C 29 26.555577 30.555577 25 32.5 25 C 34.444423 25 36 26.555577 36 28.5 L 36 45 A 1.0001 1.0001 0 0 0 37 46 L 47 46 A 1.0001 1.0001 0 0 0 48 45 L 48 28 C 48 23.873476 46.787888 20.604454 44.744141 18.375 C 42.700394 16.145546 39.849212 15 36.787109 15 C 32.882872 15 30.521631 16.426076 29 17.601562 L 29 16 A 1.0001 1.0001 0 0 0 28 15 L 18 15 z M 4 17 L 12 17 L 12 35.664062 L 12 44 L 4 44 L 4 17 z M 19 17 L 27 17 L 27 19.638672 A 1.0001 1.0001 0 0 0 28.744141 20.306641 C 28.744141 20.306641 31.709841 17 36.787109 17 C 39.360007 17 41.615528 17.922268 43.269531 19.726562 C 44.923534 21.530858 46 24.261524 46 28 L 46 44 L 38 44 L 38 28.5 A 1.0001 1.0001 0 0 0 37.916016 28.089844 C 37.694061 25.26411 35.38033 23 32.5 23 C 29.474423 23 27 25.474423 27 28.5 L 27 28.75 L 27 29 L 27 44 L 19 44 L 19 17 z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a role="button" class="btn btn-outline-light border-0" target="_blank">
+                            <span class="h4">linkedin.com/in/mrzyczniak/</span>
+                        </a>
+                    </div>
+                    <div class="btn-group align-items-center" role="group" aria-label="Mail link">
+                        <a role="button" class="btn btn-outline-dark border-0" href="mailto:mily.wot@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+                                viewBox="0 0 50 50">
+                                <path fill="#ffffff"
+                                    d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 14 6 L 36 6 C 40.430666 6 44 9.5693339 44 14 L 44 36 C 44 40.430666 40.430666 44 36 44 L 14 44 C 9.5693339 44 6 40.430666 6 36 L 6 14 C 6 9.5693339 9.5693339 6 14 6 z M 13 15 C 11.35503 15 10 16.35503 10 18 L 10 32 C 10 33.64497 11.35503 35 13 35 L 37 35 C 38.64497 35 40 33.64497 40 32 L 40 18 C 40 16.35503 38.64497 15 37 15 L 13 15 z M 13.414062 17 L 36.583984 17 L 27.677734 25.892578 C 26.18494 27.382984 23.796834 27.382819 22.304688 25.890625 L 13.414062 17 z M 38 18.412109 L 38 31.587891 L 31.402344 25 L 38 18.412109 z M 12 18.414062 L 18.585938 25 L 12 31.585938 L 12 18.414062 z M 29.988281 26.412109 L 36.585938 33 L 13.414062 33 L 20 26.414062 L 20.890625 27.304688 C 23.146478 29.56054 26.832638 29.562194 29.089844 27.308594 L 29.988281 26.412109 z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a role="button" class="btn btn-outline-light border-0" href="mailto:mily.wot@gmail.com">
+                            <span class="h4">mily.wot@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--------- Experience --------->
+    <section id="experience" class="pt-5 pb-5 text-white">
+        <div class="container">
+            <div class="d-flex row d-grid gap-5">
+                <div class="col-lg-8 d">
+                    <h1 class="mb-5 text-primary display-3">Experience</h1>
+                    <p class="small mb-0">09/2022 - 06/2023</p>
+                    <h2 class="mb-1 text-primary display-6">Junior Full Stack Developer</h2>
+                    <p class="h5 mb-3">ITIS Sp. z o.o.</p>
+                    <p>Technologies: <strong class="text-primary">Aurelia (similar to Angular), TypeScript, HTML, .NET,
+                            GIT, TFS</strong></p>
+                    <div class="mb-5">
+                        I worked with team on the Wienner (Vienna Insurance
+                        Group) website project. I mainly dealt with frontend,
+                        creating and modifying components, controllers and
+                        converters. I also learned and used .NET for the basics.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------- Education --------->
+    <section id="education" class="pt-5 pb-5 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex row d-grid gap-5">
+                <div class="col-lg-4">
+                    <img src="./assets/book.png" alt="Book" class="img-cover section-img rounded mb-2">
+                </div>
+                <div class="col-lg-7">
+                    <h1 class="mb-5 text-primary display-3">Education</h1>
+                    <div class="mb-4">
+                        I have been studying Computer Science in Computer Engineering at the
+                        Politechnika Krakwska for a year now. During this time, I have also gained
+                        valuable work experience as a Junior Full Stack Developer for almost a year.
+                        Creating websites and apps is my passion. I am always eager to learn new
+                        technologies to enhance my skills in web development.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</html>
