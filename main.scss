@@ -3,6 +3,7 @@
 .body {
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 @keyframes animate-bg-shapes {
@@ -127,9 +128,9 @@
 }
 
 #experience {
+    min-height: 40vh;
     background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('./assets/exp.jpg') no-repeat;
     background-attachment: fixed;
-
     background-size: cover;
     background-position: center;
 }

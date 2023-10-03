@@ -10889,6 +10889,7 @@ textarea.form-control-lg {
 .body {
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 @keyframes animate-bg-shapes {
@@ -10998,6 +10999,7 @@ textarea.form-control-lg {
 }
 
 #experience {
+  min-height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/exp.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
