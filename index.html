@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo">
-    <title>Document</title>
+    <title>RZYCZU</title>
 
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./assets/scss/circleCarousel.css">
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./assets/js/circleCarousel.js"></script>
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -51,14 +55,14 @@
                             <a class="nav-link" href="#hobbies">HOBBIES</a>
                         </li>
                     </ul>
-                    <button class="ms-5 btn btn-outline-light" href="#contactMe">CONTACT ME</button>
+                    <a role="button" class="ms-5 btn btn-outline-light" href="#contactMe">CONTACT ME</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!--------- About me --------->
-    <section id="aboutMe" class=" bg-shapes pt-5 pb-5 bg-dark text-white">
+    <section id="aboutMe" class="bg-shapes pt-5 pb-5 bg-dark text-white">
         <div class="shape"></div>
         <div class="shape"></div>
         <div class="shape"></div>
@@ -69,7 +73,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
 
-        <div class="container">
+        <div class="container text-center-md">
             <div class="d-flex row d-grid">
                 <div class="col-lg-5 text-center">
                     <img src="./assets/me_2_opacity.png" alt="Photo of me" class="img-fluid section-img rounded mb-2 ">
@@ -93,7 +97,8 @@
                                 </path>
                             </svg>
                         </a>
-                        <a role="button" class="btn btn-outline-light border-0" target="_blank">
+                        <a role="button" class="btn btn-outline-light border-0"
+                            href="https://www.linkedin.com/in/mrzyczniak/">
                             <span class="h4">linkedin.com/in/mrzyczniak/</span>
                         </a>
                     </div>
@@ -119,9 +124,9 @@
     <!--------- Experience --------->
     <section id="experience" class="pt-5 pb-5 text-white  d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="mb-5 text-primary display-3">EXPERIENCE</h1>
-            <p class="small mb-0 text-secondary"><i>09/2022 - 06/2023</i></p>
-            <h2 class=" mb-1 text-primary display-6">Junior Full Stack Developer</h2>
+            <h2 class="mb-5 text-primary display-3">EXPERIENCE</h2>
+            <p class="small mb-0 text-info"><i>09/2022 - 06/2023</i></p>
+            <h3 class=" mb-1 text-primary display-6">Junior Full Stack Developer</h3>
             <p class="h5 mb-3">ITIS Sp. z o.o.</p>
             <p>Technologies: <strong>Aurelia (similar to Angular), TypeScript, HTML, .NET,
                     GIT, TFS</strong></p>
@@ -132,22 +137,21 @@
                 converters. I also learned and used .NET for the basics.
             </div>
         </div>
-        </div>
     </section>
 
     <!--------- Education --------->
     <section id="education" class="pt-5 pb-5 bg-dark text-white">
-        <div class="container">
-            <h1 class="mb-5 text-primary display-3 d-lg-none text-center">EDUCATION</h1>
+        <div class="container text-center-md">
+            <h2 class="mb-5 text-primary display-3 d-lg-none text-center">EDUCATION</h2>
             <div class="d-flex row flex-row-reverse d-grid">
                 <div class="col-lg-4">
                     <img src="./assets/book.png" alt="Book" class="img-fluid section-img rounded mb-2">
                 </div>
                 <div class="col-lg-8">
                     <div class="mb-5">
-                        <h1 class="mb-5 text-primary display-3 d-none d-lg-block">EDUCATION</h1>
-                        <p class="small mb-0 text-secondary"><i>2022 - present</i></p>
-                        <h2 class="mb-3 text-primary display-6">Tadeusz Kościuszko Krakow University of Technology</h2>
+                        <h2 class="mb-5 text-primary display-3 d-none d-lg-block">EDUCATION</h2>
+                        <p class="small mb-0 text-info"><i>2022 - present</i></p>
+                        <h3 class="mb-3 text-primary display-6">Tadeusz Kościuszko Krakow University of Technology</h3>
                         <div class="row">
                             <div class="col">
                                 <p class="mb-0">Specialization:</p>
@@ -160,8 +164,8 @@
                         </div>
                     </div>
                     <div class="mb-5">
-                        <p class="small mb-0 text-secondary"><i>2018 - 2022</i></p>
-                        <h2 class="mb-3 text-primary display-6">Technikum Łączności nr. 14 w Krakowie</h2>
+                        <p class="small mb-0 text-info"><i>2018 - 2022</i></p>
+                        <h3 class="mb-3 text-primary display-6">Technikum Łączności nr. 14 w Krakowie</h3>
                         <div class="row">
                             <div class="col">
                                 <p class="mb-0">Specialization:</p>
@@ -177,6 +181,201 @@
             </div>
         </div>
     </section>
+    <!--------- Experience --------->
+    <section id="skills" class="pt-5 pb-5 text-white bg-secondary d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="mb-5 text-primary display-3">SKILLS</h1>
+            <h2 class="text-primary display-6">Front End</h2>
+            <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
+                <div class="slides">
+                    <div class="slide">
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>SCSS</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>SASS</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>Bootstrap</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>TypeScript</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>React</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>Aurelia</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>ThreeJS</h3>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="item">
+                        <img alt="HTML badge" class="dot"
+                            src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                    </div>
+                    <div class=" item">
+                        <img alt="CSS badge" class="dot"
+                            src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="SASS badge" class="dot"
+                            src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="Bootstrap badge" class="dot"
+                            src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="JavaScript badge" class="dot"
+                            src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+                    </div>
+                    <div class="item">
+                        <img alt="TypeScript badge" class="dot"
+                            src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="React badge" class="dot"
+                            src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+                    </div>
+                    <div class="item">
+                        <img alt="Aurelia badge" class="dot"
+                            src="https://img.shields.io/badge/aurelia-%23ED2B88.svg?style=for-the-badge&logo=aurelia&logoColor=fff">
+                    </div>
+                    <div class="item">
+                        <img alt="ThreeJS badge" class="dot"
+                            src="https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white">
+                    </div>
+                </div>
+                <div class="next">Next</div>
+                <div class="prev">Prev</div>
+            </div>
+            <h2 class="mt-4 text-primary display-6">Back End</h2>
+            <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
+                <div class="slides">
+                    <div class="slide">
+                        <h3>NodeJS</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>Express.js</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>PHP</h3>
+                    </div>
+                    <div class="slide">h3
+                        <h3>WordPress</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>PostgreSQL</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>.Net</h3>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="item">
+                        <img alt="NodeJS badge" class="dot"
+                            src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="Express.js badge" class="dot"
+                            src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB">
+                    </div>
+                    <div class="item">
+                        <img alt="PHP badge" class="dot"
+                            src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="WordPress badge" class="dot"
+                            src="https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="MySQL badge" class="dot"
+                            src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="PostgreSQL badge" class="dot"
+                            src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="Python badge" class="dot"
+                            src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+                    </div>
+                    <div class="item">
+                        <img alt=".NET badge" class="dot"
+                            src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white">
+                    </div>
+                </div>
+                <div class="next">Next</div>
+                <div class="prev">Prev</div>
+            </div>
+            <h2 class="mt-4 text-primary display-6">Other</h2>
+            <div class="circle-carousel" data-speed="2000" data-autoplay="2500">
+                <div class="slides">
+                    <div class="slide">
+                        <h3>React Native</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>GIT</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>WebPack</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="slide">
+                        <h3>C#</h3>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div class="item">
+                        <img alt="React Native badge" class="dot"
+                            src="https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+                    </div>
+                    <div class="item">
+                        <img alt="GIT badge" class="dot"
+                            src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="WebPack badge" class="dot"
+                            src="https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black">
+                    </div>
+                    <div class="item">
+                        <img alt="Python badge" class="dot"
+                            src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+                    </div>
+                    <div class="item">
+                        <img alt="C++ badge" class="dot"
+                            src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white">
+                    </div>
+                    <div class="item">
+                        <img alt="C# badge" class="dot"
+                            src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white">
+                    </div>
+                </div>
+                <div class="next">Next</div>
+                <div class="prev">Prev</div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
