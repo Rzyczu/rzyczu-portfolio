@@ -24,7 +24,7 @@ function initCarousel(options) {
         this.pagTransf = 'translate( -50%, -50% )';
         this.dots = this.pagination.children;
         this.dotsN = this.dots.length;
-        this.step = -360 / this.dotsN;
+        this.step = Math.random() < 0.5 ? (-360 / this.dotsN) : (360 / this.dotsN);
         this.angle = 0;
         this.next = this.node.querySelector('.next');
         this.prev = this.node.querySelector('.prev');
@@ -39,6 +39,8 @@ function initCarousel(options) {
         this.pagination.style.transitionDuration = this.speed + 'ms';
         if (this.autoplay) this.startAutoplay();
     }
+
+
 
     CustomCarousel.prototype.addListeners = function () {
         var slider = this;
@@ -135,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var carousel = initCarousel({
                 node: plugins.customCarousel[i],
                 speed: plugins.customCarousel[i].getAttribute('data-speed'),
-                autoplay: plugins.customCarousel[i].getAttribute('data-autoplay')
+                autoplay: plugins.customCarousel[i].getAttribute('data-autoplay'),
             });
         }
     }
