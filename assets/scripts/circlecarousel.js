@@ -24,7 +24,8 @@ function initCarousel(options) {
         this.pagTransf = 'translate( -50%, -50% )';
         this.dots = this.pagination.children;
         this.dotsN = this.dots.length;
-        this.step = Math.random() < 0.5 ? (-360 / this.dotsN) : (360 / this.dotsN);
+        // this.step = Math.random() < 0.5 ? (-360 / this.dotsN) : (360 / this.dotsN);
+        this.step = -360 / this.dotsN;
         this.angle = 0;
         this.next = this.node.querySelector('.next');
         this.prev = this.node.querySelector('.prev');
