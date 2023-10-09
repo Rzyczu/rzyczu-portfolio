@@ -8,6 +8,8 @@ $xs: 576px;
 .circle-carousel {
     position: relative;
     padding-top: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 
     .slides {
         position: absolute;
@@ -61,6 +63,7 @@ $xs: 576px;
             height: 90%;
         }
 
+
         .dot {
             display: flex;
             align-items: center;
@@ -91,7 +94,7 @@ $xs: 576px;
             }
 
             @media (max-width: #{$sm}) {
-                height: 30px;
+                height: 20px;
             }
 
             &:hover {

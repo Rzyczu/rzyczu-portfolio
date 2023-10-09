@@ -1,6 +1,8 @@
 .circle-carousel {
   position: relative;
   padding-top: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .circle-carousel .slides {
   position: absolute;
@@ -88,7 +90,7 @@
 }
 @media (max-width: 576px) {
   .circle-carousel .pagination .dot {
-    height: 30px;
+    height: 20px;
   }
 }
 .circle-carousel .pagination .dot:hover {
