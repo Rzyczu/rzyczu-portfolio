@@ -1,6 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    color: white;
+}
+
+.page {
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .circle-carousel {
     position: relative;
     padding-top: 100%;
+    background: rgba(black, .3);
 
     .slides {
         position: absolute;
@@ -21,6 +44,7 @@
         height: 100%;
         z-index: 0;
         opacity: 0;
+        background: rgba(red, .3);
 
         &.active {
             z-index: 1;
@@ -34,8 +58,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         border-radius: 50%;
         border: 3px solid white;
         transition-property: transform;
@@ -52,30 +76,18 @@
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%);
-            height: 80px;
-            width: auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             pointer-events: auto;
             transition: .3s;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 2px;
-            border-radius: 10px;
+            background: black;
 
             &:hover {
-                transform: translate(-50%, -50%) scale(1.1);
+                transform: translate(-50%, -50%) scale(1.05);
                 cursor: pointer;
-            }
-
-
-            @media (max-width: 1200px) {
-                height: 65px;
-            }
-
-            @media (max-width: 992px) {
-                height: 50px;
-            }
-
-            @media (max-width: 768px) {
-                height: 30px;
+                background: white;
+                color: black;
             }
         }
 
@@ -89,8 +101,7 @@
 
             &.active {
                 .dot {
-                    transform: translate(-50%, -50%) scale(1.2);
-                    background: rgba(255, 255, 255);
+                    background: white;
                     color: black;
                 }
             }
@@ -102,6 +113,7 @@
         position: absolute;
         bottom: 6%;
         z-index: 1;
+        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: .3em;
         transition: .3s;
@@ -114,7 +126,7 @@
             z-index: -1;
             transform: translate(-50%, -50%);
             border-style: solid;
-            border-color: transparent #171717;
+            border-color: transparent black;
             transition: .3s;
         }
 
@@ -134,7 +146,7 @@
 
         &:before {
             left: 65%;
-            border-width: 50px 0 50px 120px;
+            border-width: 30px 0 30px 70px;
         }
     }
 
@@ -143,7 +155,7 @@
 
         &:before {
             left: 35%;
-            border-width: 50px 120px 50px 0;
+            border-width: 30px 70px 30px 0;
         }
     }
 }
