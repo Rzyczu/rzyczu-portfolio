@@ -90,6 +90,10 @@ $xs: 576px;
                 height: 40px;
             }
 
+            @media (max-width: #{$sm}) {
+                height: 30px;
+            }
+
             &:hover {
                 transform: translate(-50%, -50%) scale(1.2);
                 background: rgba(255, 255, 255);
