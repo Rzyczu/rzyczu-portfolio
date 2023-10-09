@@ -127,6 +127,7 @@ function initCarousel(options) {
 var plugins = {
     customCarousel: document.querySelectorAll('.circle-carousel')
 }
+console.log('Before initializing carousel');
 
 document.addEventListener('DOMContentLoaded', function () {
     if (plugins.customCarousel.length) {
@@ -139,3 +140,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+console.log('After initializing carousel');
+
