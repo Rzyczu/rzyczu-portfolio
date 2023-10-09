@@ -90,7 +90,7 @@
 }
 @media (max-width: 576px) {
   .circle-carousel .pagination .dot {
-    height: 20px;
+    height: 25px;
   }
 }
 .circle-carousel .pagination .dot:hover {
