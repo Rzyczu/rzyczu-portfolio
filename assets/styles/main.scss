@@ -1,4 +1,4 @@
-@import "./node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 // @import "./assets/scss/circleCarousel";
 
 .body {
@@ -130,7 +130,7 @@
 }
 
 #experience {
-    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('./assets/exp.jpg') no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('../img/exp.jpg') no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -138,5 +138,19 @@
 
 section {
     min-height: 50vh;
+}
 
+
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .position-md-relative {
+        position: relative;
+    }
+
+    .img-absolute-md {
+        position: absolute;
+        right: -10%;
+        top: 0;
+        z-index: 0;
+    }
 }
