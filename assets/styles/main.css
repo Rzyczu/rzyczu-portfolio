@@ -10910,7 +10910,7 @@ section {
     position: relative;
   }
   .img-absolute-md {
-    position: absolute;
+    position: absolute !important;
     right: -10%;
     top: 0;
     z-index: 0;
