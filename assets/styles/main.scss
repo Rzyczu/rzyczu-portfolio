@@ -136,6 +136,13 @@
     background-position: center;
 }
 
+#projects {
+    background: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('../img/projects.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
 section {
     min-height: 50vh;
 }
@@ -153,4 +160,10 @@ section {
         top: 0;
         z-index: 0;
     }
+}
+
+nav {
+    -moz-box-shadow: 0 .1px .1px rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0 .1px .1px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 .1px .1px rgba(255, 255, 255, 0.4);
 }
