@@ -6,6 +6,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "bootstrap": "^5.2.3",
+    "swiper": "^10.3.1"
   }
 }

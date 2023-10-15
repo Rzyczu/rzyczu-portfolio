@@ -8,10 +8,13 @@
     <title>RZYCZU</title>
 
     <link rel="stylesheet" href="./assets/styles/main.css">
-    <link rel="stylesheet" href="./assets/styles/circleCarousel/circleCarousel.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script defer src="./assets/scripts/main.js" type="text/javascript"></script>
     <script defer src="./assets/scripts/circlecarousel.js" type="text/javascript"></script>
+    <script defer src="./assets/scripts/swiper.js" type="text/javascript"></script>
 
 </head>
 
@@ -57,6 +60,8 @@
             </div>
         </div>
     </nav>
+
+
 
     <!--------- About me --------->
     <section id="aboutMe" class="bg-shapes pt-5 pb-5 bg-dark text-white d-flex align-items-center">
@@ -122,120 +127,108 @@
     <!--------- Projects --------->
     <section id="projects" class="pt-5 pb-5 text-white d-flex align-items-center d-flex align-items-center">
         <div class="container-fluid text-center">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="zoom">
+                <div id="caption"></div>
+            </div>
             <h2 class="mb-5 text-primary display-3">PROJECTS</h2>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-around">
-                            <div class="col-md-5 mb-3">
-                                <div class="card text-bg-dark border-light h-100">
-                                    <img class="img-fluid" alt="100%x280"
-                                        src="https://user-images.githubusercontent.com/70780585/274428121-3bd52f2a-9cb9-483a-9e86-c45e2bc34b04.png">
-                                    <div class="card-body">
-                                        <h3 class="mb-1 card-title text-primary display-6">Association Tęcza page</h3>
-                                        <p class="card-text">The website is for the Association Tęcza. (not finished
-                                            yet)</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="https://github.com/Rzyczu/Association_Tecza_page"
-                                            class="btn btn-outline-light">&gt;&gt; GITHUB &lt;&lt; </a>
-                                        <a href="https://tecza-testpage.netlify.app/"
-                                            class="btn btn-outline-light">&gt;&gt; DEMO &lt;&lt;</a>
-                                    </div>
-                                </div>
+            <div class="swiper text-dark">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="card text-bg-dark border-light h-100">
+                            <img class="img-fluid img-zoom" alt="Association page"
+                                src="https://user-images.githubusercontent.com/70780585/274428121-3bd52f2a-9cb9-483a-9e86-c45e2bc34b04.png">
+                            <div class="card-body">
+                                <h3 class="mb-1 card-title text-primary display-6">Association page</h3>
+                                <p class="card-text">The website is for the Association Tęcza. (not finished
+                                    yet)</p>
                             </div>
-                            <div class="col-md-5 mb-3">
-                                <div class="card text-bg-dark border-light h-100">
-                                    <img class="img-fluid" alt="100%x280"
-                                        src="https://user-images.githubusercontent.com/70780585/246620817-bb6ccfc4-12c3-4331-8e9c-96c614d28bef.png">
-                                    <div class="card-body">
-                                        <h3 class="mb-1 card-title text-primary display-6">Labirintum - Maze Game</h3>
-                                        <p class="card-text">The project presents a 3D multiplayer game for two players.
-                                            The goal of the game is to get through the maze as quickly as possible.</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="https://github.com/Rzyczu/Association_Tecza_page"
-                                            class="btn btn-outline-light">&gt;&gt; GITHUB &lt;&lt; </a>
-                                    </div>
-                                </div>
+                            <div class="card-body">
+                                <a href="https://github.com/Rzyczu/Association_Tecza_page"
+                                    class="btn btn-outline-light">&gt;&gt; GITHUB &lt;&lt; </a>
+                                <a href="https://tecza-testpage.netlify.app/" class="btn btn-outline-light">&gt;&gt;
+                                    DEMO &lt;&lt;</a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-around">
-                            <div class="col-md-5 mb-3">
-                                <div class="card text-bg-dark border-light h-100">
-                                    <img class="img-fluid" alt="100%x280"
-                                        src="https://user-images.githubusercontent.com/70780585/274429186-eb818c66-b18f-40fa-92d7-4c5199d42a15.png">
-                                    <div class="card-body">
-                                        <h3 class="mb-1 card-title text-primary display-6">Tetris Game</h3>
-                                        <p class="card-text">The application presents the popular Tetris game from the
-                                            Nintendo NES platform.</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="https://github.com/Rzyczu/Tetris/"
-                                            class="btn btn-outline-light">&gt;&gt; GITHUB &lt;&lt; </a>
-                                        <a href="https://rzyczu.github.io/Tetris/"
-                                            class="btn btn-outline-light">&gt;&gt; DEMO &lt;&lt;</a>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="card text-bg-dark border-light h-100">
+                            <img class="img-fluid img-zoom" alt="Labirintum - Maze Game"
+                                src="https://user-images.githubusercontent.com/70780585/246620817-bb6ccfc4-12c3-4331-8e9c-96c614d28bef.png">
+                            <div class="card-body">
+                                <h3 class="mb-1 card-title text-primary display-6">Labirintum - Maze Game</h3>
+                                <p class="card-text">The project presents a 3D multiplayer game for two players.
+                                    The goal of the game is to get through the maze as quickly as possible.</p>
                             </div>
-                            <div class="col-md-5 mb-3">
-                                <div class="card text-bg-dark border-light h-100">
-                                    <img class="img-fluid" alt="100%x280"
-                                        src="https://user-images.githubusercontent.com/70780585/181725225-67435e9f-0a7d-4a0d-b37d-543cccd79be9.png">
-                                    <div class="card-body">
-                                        <h3 class="mb-1 card-title text-primary display-6">Cinema App</h3>
-                                        <p class="card-text">The project presents the website of the cinema with the
-                                            possibility of registration, logging in and booking of screenings.
-                                        </p>
-                                    </div>
-                                    <div class="card-body">
-                                        <a href="https://github.com/Rzyczu/Cinema"
-                                            class="btn btn-outline-light">&gt;&gt; GITHUB &lt;&lt; </a>
-                                    </div>
-                                </div>
+                            <div class="card-body">
+                                <a href="https://github.com/Rzyczu/Association_Tecza_page"
+                                    class="btn btn-outline-light">&gt;&gt; GITHUB &lt;&lt; </a>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-around">
-                            <div class="col-md-5 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280"
-                                        src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
-                                    <div class="card-body">
-                                        <h3 class=" mb-1 text-primary display-6">Junior Full Stack Developer</h3>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="card text-bg-dark border-light h-100">
+                            <img class="img-fluid img-zoom" alt="Driving School Page"
+                                src="https://user-images.githubusercontent.com/70780585/275356730-3d61f2e2-8cb0-4864-9edc-f417993b6b11.png">
+                            <div class="card-body">
+                                <h3 class="mb-1 card-title text-primary display-6">Driving School Page</h3>
+                                <p class="card-text">The project shows the website of a driving school. (not
+                                    finished)
+                                </p>
                             </div>
-                            <div class="col-md-5 mb-3">
-                                <div class="card">
-                                    <img class="img-fluid" alt="100%x280"
-                                        src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
-                                    <div class="card-body">
-                                        <h3 class=" mb-1 text-primary display-6">Junior Full Stack Developer</h3>
-                                        <p class="card-text">With supporting text below as a natural lead-in to
-                                            additional content.</p>
-                                    </div>
-                                </div>
+                            <div class="card-body">
+                                <a href="https://github.com/Rzyczu/dimax-page" class="btn btn-outline-light">&gt;&gt;
+                                    GITHUB &lt;&lt; </a>
+                                <a href="https://dimax-page.netlify.app/" class="btn btn-outline-light">&gt;&gt;DEMO
+                                    &lt;&lt;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card text-bg-dark border-light h-100">
+                            <img class="img-fluid img-zoom" alt="Cinema Page"
+                                src="https://user-images.githubusercontent.com/70780585/181725225-67435e9f-0a7d-4a0d-b37d-543cccd79be9.png">
+                            <div class="card-body">
+                                <h3 class="mb-1 card-title text-primary display-6">Association page</h3>
+                                <p class="card-text">The project presents the website of the cinema with the possibility
+                                    of registration, logging in and booking screenings of selected films.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <a href="https://github.com/Rzyczu/Cinema" class="btn btn-outline-light">&gt;&gt; GITHUB
+                                    &lt;&lt; </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card text-bg-dark border-light h-100">
+                            <img class="img-fluid img-zoom" alt="Mobile Scouting App"
+                                src="https://user-images.githubusercontent.com/70780585/275357547-55a38333-eb35-49dd-b665-a1ead447ee63.png">
+                            <div class="card-body">
+                                <h3 class="mb-1 card-title text-primary display-6">Mobile Scout App</h3>
+                                <p class="card-text">The application was created in React Native for the scouting game.
+                                </p>
+                            </div>
+                            <div class="card-body ">
+                                <a href="https://github.com/Rzyczu/Scouting_Game_World_Thinking_Day"
+                                    class="btn btn-outline-light">&gt;&gt; GITHUB
+                                    &lt;&lt; </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+
             </div>
+
         </div>
     </section>
 
