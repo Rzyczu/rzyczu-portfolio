@@ -32,3 +32,28 @@ function closeModal() {
     modal.style.display = "none";
     modalImg.className = "modal-content"; // Reset any additional classes added during zoom
 }
+
+// document.querySelectorAll(".navbar-nav a").forEach(function (link) {
+//     link.addEventListener("click", function () {
+//         if (document.getElementById('offcanvasDarkNavbar').classList.contains('show')) {
+//             var offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasDarkNavbar'));
+//             console.log(offcanvas)
+//             offcanvas.hide();
+//         }
+//     });
+// });
+
+function sendEmail() {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: "sender@email_address.com",
+        Password: "Enter your password",
+        To: 'mily.wot@gmail.com',
+        From: "sender@email_address.com",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+    })
+        .then(function (message) {
+            alert("mail sent successfully")
+        });
+} 
