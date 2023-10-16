@@ -2,124 +2,13 @@
 @import "../styles/swiper/swiper";
 @import "../styles/circleCarousel/circleCarousel";
 @import "../styles/zoom/zoom.scss";
+@import "../styles/zoom/bgSgape.scss";
 
 .body {
     width: 100%;
     position: relative;
     overflow-x: hidden;
 }
-
-
-@keyframes animate-bg-shapes {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
-}
-
-.bg-shapes {
-    position: relative;
-    background: #000000;
-    overflow: hidden;
-
-    .shape {
-        position: absolute;
-        display: block;
-        list-style: none;
-        width: 20px;
-        height: 20px;
-        background: rgba(0, 0, 0, 0.2);
-        animation: animate-bg-shapes 7s linear infinite;
-    }
-
-    .shape:nth-child(1) {
-        left: 19%;
-        width: 195px;
-        height: 195px;
-        bottom: -195px;
-        animation-delay: 1s;
-    }
-
-    .shape:nth-child(2) {
-        left: 0%;
-        width: 131px;
-        height: 131px;
-        bottom: -131px;
-        animation-delay: 3s;
-    }
-
-    .shape:nth-child(3) {
-        left: 60%;
-        width: 172px;
-        height: 172px;
-        bottom: -172px;
-        animation-delay: 4s;
-    }
-
-    .shape:nth-child(4) {
-        left: 78%;
-        width: 120px;
-        height: 120px;
-        bottom: -120px;
-        animation-delay: 2s;
-    }
-
-    .shape:nth-child(5) {
-        left: 85%;
-        width: 145px;
-        height: 145px;
-        bottom: -145px;
-        animation-delay: 10s;
-    }
-
-    .shape:nth-child(6) {
-        left: 82%;
-        width: 107px;
-        height: 107px;
-        bottom: -107px;
-        animation-delay: 20s;
-    }
-
-    .shape:nth-child(7) {
-        left: 31%;
-        width: 132px;
-        height: 132px;
-        bottom: -132px;
-        animation-delay: 7s;
-    }
-
-    .shape:nth-child(8) {
-        left: 28%;
-        width: 186px;
-        height: 186px;
-        bottom: -186px;
-        animation-delay: 20s;
-    }
-
-    .shape:nth-child(9) {
-        left: 74%;
-        width: 138px;
-        height: 138px;
-        bottom: -138px;
-        animation-delay: 10s;
-    }
-
-    .shape:nth-child(10) {
-        left: 31%;
-        width: 195px;
-        height: 195px;
-        bottom: -195px;
-        animation-delay: 41s;
-    }
-}
-
 
 .section-img {
     z-index: 10;
