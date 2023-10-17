@@ -53,18 +53,6 @@ footer {
     padding: 2rem 0 2rem 0;
 }
 
-$color1 : #161719;
-$color2 : #26272b;
-$text : #9fa2a7;
-$highlight1 : #c675ff;
-$highlight2 : #b388dd;
-$highlight3 : #ff8750;
-$highlight4 : #01AD9B;
-
-.text-center {
-    text-align: center;
-}
-
 .cf {
     *zoom: 1;
 
@@ -81,15 +69,14 @@ $highlight4 : #01AD9B;
 
 
 
-
-.wrapper {
+.quote {
     max-width: 450px;
     margin: 0 auto;
 
     .speechbubble {
-        background-color: $color2;
-        color: $text;
-        font-size: .8em;
+        position: relative;
+        background-color: lighten($dark, 10%);
+        color: $secondary;
         line-height: 1.75;
         padding: 15px 25px;
         margin-bottom: 75px;
@@ -109,7 +96,7 @@ $highlight4 : #01AD9B;
             left: 20px;
             border-width: 30px 0 0 30px;
             border-style: solid;
-            border-color: $color2 transparent;
+            border-color: lighten($dark, 10%) transparent;
             display: block;
             width: 0;
         }
@@ -128,28 +115,14 @@ $highlight4 : #01AD9B;
             left: 350px;
             border-width: 30px 30px 0 0;
             border-style: solid;
-            border-color: $color2 transparent;
+            border-color: lighten($dark, 10%) transparent;
             display: block;
             width: 0;
         }
 
-
-        // Randomize every 4th bubble's border color
-        &:nth-child(4n+1) {
+        &:nth-child(n) {
             //border-color: hsla(random(365), random(365), 50, 1);
-            border-color: $highlight1;
-        }
-
-        &:nth-child(4n+2) {
-            border-color: $highlight4;
-        }
-
-        &:nth-child(4n+3) {
-            border-color: $highlight2;
-        }
-
-        &:nth-child(4n+4) {
-            border-color: $highlight3;
+            border-color: $primary;
         }
 
         // Quotation symbols
@@ -163,9 +136,10 @@ $highlight4 : #01AD9B;
         }
 
         p:after {
-            content: "“";
+            content: "”";
+            position: absolute;
+            bottom: 15px;
             font-family: Georgia;
-            bottom: 10px;
             font-size: 40px;
             line-height: 0;
             display: inline-block;

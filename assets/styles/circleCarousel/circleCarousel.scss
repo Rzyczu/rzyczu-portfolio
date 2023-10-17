@@ -46,7 +46,7 @@ $xs: 576px;
         width: 90%;
         height: 90%;
         border-radius: 50%;
-        border: 3px solid white;
+        border: 3px solid $white;
         transition-property: transform;
         transition-timing-function: ease-out;
         // transition-timing-function: cubic-bezier(.5,-.5,.5,1.5);
