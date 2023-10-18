@@ -8,16 +8,3 @@ circleCarouselFunction();
 swiperFunction();
 
 'use strict';
-
-
-document.querySelectorAll(".navbar-nav a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        if (document.getElementById('offcanvasDarkNavbar').classList.contains('show')) {
-            var offcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasDarkNavbar'));
-            console.log(offcanvas)
-            offcanvas.hide();
-        }
-    });
-});
-
-
