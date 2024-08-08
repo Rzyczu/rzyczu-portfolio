@@ -1,0 +1,13 @@
+@import "./scss/variables.scss";
+@import "./scss/mixins.scss";
+@import "./scss/root.scss";
+@import "./scss/reboot.scss";
+@import "./scss/type.scss";
+@import "./scss/container.scss";
+@import "./scss/button.scss";
+
+body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
