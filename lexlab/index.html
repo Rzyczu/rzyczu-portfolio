@@ -33,7 +33,7 @@ body[data-view="quiz"] .foot{padding-top:9px}
 </style></head><body><main class="shell"><header class="top"><div class="brand"><div class="logo">L</div><span>LexLab <span style="color:#8d9bb3;font-weight:400">/ Paremie</span></span></div><span class="pill" id="topstat">TRENING PRAWNICZY</span></header>
 <section class="hero"><div class="eyebrow">MEMORIA · REPETITIO · LEX</div><h1>Łacina, którą<br>zapamiętasz.</h1><p>Ucz się paremii prawniczych, wpisując pełne sentencje. Ćwicz w obu kierunkach i obserwuj postęp. Baza: wszystkie 58 paremii z przesłanego materiału UJ na 2026/27.</p></section>
 <div id="home" class="layout"><section class="panel"><h2 class="card-title">Nowa sesja</h2><span class="label">KIERUNEK TŁUMACZENIA</span><div class="choice" id="modes"><button class="active" data-mode="pl-la">PL → LA<span>Na łacinę</span></button><button data-mode="la-pl">LA → PL<span>Na polski</span></button><button data-mode="mix">MIX<span>Oba kierunki</span></button></div><span class="label">LICZBA PYTAŃ</span><div class="selection" id="counts"><button data-count="10" class="active">10</button><button data-count="20">20</button><button data-count="40">40</button><button data-count="all">Wszystkie</button></div><label class="checkline"><input id="mistakesOnly" type="checkbox"> Ćwicz tylko poprzednio błędne</label><label class="checkline"><input id="strict" type="checkbox"> Dokładne sprawdzanie (bez tolerancji literówek)</label><button id="start" class="primary wide">Rozpocznij trening →</button><button id="catalogBtn" class="secondary wide" style="margin-top:10px">Przeglądaj bazę sentencji</button></section><aside class="panel"><h2 class="card-title">Twoje statystyki</h2><div class="stats"><div class="stat"><div class="num" id="total">0</div><label>Udzielonych odpowiedzi</label></div><div class="stat"><div class="num" id="accuracy">0%</div><label>Skuteczność łączna</label></div><div class="stat"><div class="num" id="best">0</div><label>Najlepsza seria</label></div></div><button class="secondary wide" id="resetStats">Wyzeruj statystyki</button></aside></div>
-<section id="quiz" class="panel hidden"><div class="quiz-top"><div class="tag" id="direction">POLSKI → ŁACINA</div><div class="muted" id="progressText">1 / 10</div></div><div class="bar"><div id="progress"></div></div><div class="question"><div class="eyebrow">PRZETŁUMACZ SENTENCJĘ</div><strong id="prompt"></strong></div><label class="label" for="answer">TWOJA ODPOWIEDŹ</label><textarea id="answer" class="answer" placeholder="Wpisz pełną sentencję…" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea><div class="keyboard">Enter × 2 — sprawdź odpowiedź (telefon, tablet, komputer) · Ctrl/Cmd + Enter — również działa</div><div class="actions"><button id="check" class="primary">Sprawdź odpowiedź</button><button id="skip" class="secondary">Pomiń</button><button id="quit" class="secondary">Zakończ</button></div><div id="feedback" class="feedback hidden" aria-live="polite"></div><button id="next" class="primary wide hidden">Następne pytanie →</button><div class="gridstats"><div><strong id="score">0</strong><span>Punkty</span></div><div><strong id="streak">0</strong><span>Seria</span></div><div><strong id="correct">0</strong><span>Poprawne</span></div></div></section>
+<section id="quiz" class="panel hidden"><div class="quiz-top"><div class="tag" id="direction">POLSKI → ŁACINA</div><div class="muted" id="progressText">1 / 10</div></div><div class="bar"><div id="progress"></div></div><div class="question"><div class="eyebrow">PRZETŁUMACZ SENTENCJĘ</div><strong id="prompt"></strong></div><label class="label" for="answer">TWOJA ODPOWIEDŹ</label><textarea id="answer" class="answer" placeholder="Wpisz pełną sentencję…" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea><div class="keyboard">Enter × 2 — sprawdź odpowiedź · Enter × 3 — pomiń, jeśli pole jest puste · Ctrl/Cmd + Enter — sprawdź</div><div class="actions"><button id="check" class="primary">Sprawdź odpowiedź</button><button id="skip" class="secondary">Pomiń</button><button id="quit" class="secondary">Zakończ</button></div><div id="feedback" class="feedback hidden" aria-live="polite"></div><button id="next" class="primary wide hidden">Następne pytanie →</button><div class="gridstats"><div><strong id="score">0</strong><span>Punkty</span></div><div><strong id="streak">0</strong><span>Seria</span></div><div><strong id="correct">0</strong><span>Poprawne</span></div></div></section>
 <section id="summary" class="panel hidden"><div class="end"><div class="tag">SESJA ZAKOŃCZONA</div><h2>Podsumowanie treningu</h2><p class="muted" id="summaryLine"></p><div class="gridstats"><div><strong id="finalScore"></strong><span>Punkty</span></div><div><strong id="finalCorrect"></strong><span>Poprawne</span></div><div><strong id="finalPercent"></strong><span>Skuteczność</span></div></div><button id="again" class="primary">Nowa sesja</button></div><h3 class="card-title">Odpowiedzi do powtórki</h3><div id="review" class="review"></div></section>
 <section id="catalogView" class="panel hidden"><div class="quiz-top"><h2 class="card-title">Baza sentencji</h2><button id="catalogBack" class="secondary">Powrót</button></div><div class="filters"><input id="search" placeholder="Szukaj po łacinie lub polsku" aria-label="Szukaj paremii"></div><div class="muted" style="font-size:12px;margin:10px 0" id="catalogCount"></div><div id="catalog" class="catalog"></div></section>
 <footer class="foot">Źródło: „Capitulum Primum: Paremie i maksymy”, Koło Naukowe Prawa Rzymskiego i Porównawczego TBSP UJ (2026/27). 58 paremii, zgodnie z przesłanym PDF. Postęp jest zapisywany lokalnie na tym urządzeniu.</footer></main><script>
@@ -341,16 +341,24 @@ $('start').onclick=start;$('check').onclick=()=>evaluate();$('skip').onclick=()=
 const answerField=$('answer');
 answerField.addEventListener('keydown',e=>{
  if(e.isComposing||e.key==='Process'||e.key!=='Enter'||e.repeat||finished)return;
- // Jeden Enter wstawia nowa linie; drugi z rzedu zatwierdza.
  const before=answerField.value.slice(0,answerField.selectionStart);
- const secondEnter=!e.shiftKey&&answerField.selectionStart===answerField.selectionEnd&&/\n$/.test(before)&&answerField.value.trim();
+ const atEnd=answerField.selectionStart===answerField.selectionEnd;
+ // Trzeci Enter w pustym polu: odpowiednik przycisku "Pomiń".
+ if(!e.shiftKey&&!e.ctrlKey&&!e.metaKey&&atEnd&&!answerField.value.trim()&&/(?:\r?\n){2}$/.test(before)){
+  e.preventDefault();evaluate(true);return;
+ }
+ // Dwa Entery po wpisaniu odpowiedzi: sprawdz (Ctrl/Cmd + Enter tez dziala).
+ const secondEnter=!e.shiftKey&&atEnd&&/\n$/.test(before)&&answerField.value.trim();
  if(e.ctrlKey||e.metaKey||secondEnter){e.preventDefault();evaluate()}
 });
-// Klawiatury ekranowe nie zawsze emituja keydown; wykrywaj tez dwa znaki nowej linii.
+// Niektore klawiatury ekranowe wysylaja tylko input, bez keydown.
 answerField.addEventListener('input',e=>{
  if(finished||e.inputType==='insertFromPaste')return;
  const before=answerField.value.slice(0,answerField.selectionStart);
- if(/(?:\r?\n){2}$/.test(before)&&answerField.value.trim())evaluate();
+ if(!answerField.value.trim()&&/(?:\r?\n){3}$/.test(before)){
+  evaluate(true);return;
+ }
+ if(answerField.value.trim()&&/(?:\r?\n){2}$/.test(before))evaluate();
 });
 $('resetStats').onclick=()=>{if(confirm('Czy na pewno wyzerować wszystkie statystyki i błędne odpowiedzi?')){saved={...base,wrong:[]};persist();stats()}};
 stats();})();
