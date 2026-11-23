@@ -1,48 +1,245 @@
 <!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#111827"><meta name="description" content="Paremie łacińskie UJ — trening tłumaczenia sentencji prawniczych"><title>LexLab — Paremie łacińskie</title><style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#e9eef7;background:#0b101a;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100dvh;background:radial-gradient(ellipse at 80% 0%,#202c49 0,transparent 40%),#0b101a}button,input,textarea,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.shell{width:min(100% - 32px,920px);margin:auto;padding:28px 0 56px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:34px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px;letter-spacing:-.5px}.logo{background:#b5a3ff;color:#19132b;font-family:Georgia,serif;font-weight:900;width:39px;height:39px;border-radius:12px;display:grid;place-items:center}.muted{color:#9daac0}.pill{border:1px solid #34405a;background:#192235;border-radius:999px;padding:8px 13px;color:#d5dceb;font-size:12px}.hero{margin-bottom:25px}.eyebrow{font-size:11px;text-transform:uppercase;color:#b1a0ff;letter-spacing:2px;font-weight:800}.hero h1{font-size:clamp(29px,5.8vw,45px);line-height:1.12;letter-spacing:-1.7px;margin:10px 0}.hero p{color:#a9b5c9;line-height:1.6;margin:0}.panel{background:#131c2b;border:1px solid #2d3950;border-radius:22px;padding:24px;box-shadow:0 16px 38px #0002}.layout{display:grid;grid-template-columns:minmax(0,1fr) 238px;gap:18px}.card-title{font-weight:750;font-size:16px;margin:0 0 17px}.label{font-size:12px;color:#aab6c9;font-weight:700;margin:20px 0 9px;display:block}.choice{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.choice button{min-height:75px;background:#1a2638;border:1px solid #34415a;color:#d4deee;border-radius:14px;text-align:left;padding:12px;font-size:13px;font-weight:700}.choice button span{font-size:11px;color:#9caac0;display:block;font-weight:500;margin-top:5px}.choice button.active{border-color:#b1a0ff;background:#292743;color:#fff;box-shadow:inset 0 0 0 1px #a695fa}.selection{display:flex;flex-wrap:wrap;gap:8px}.selection button{border:1px solid #34415a;background:#1a2638;color:#cbd5e4;padding:9px 13px;border-radius:11px;font-size:13px}.selection button.active{border-color:#ae9cfb;background:#332b54;color:white}.checkline{display:flex;align-items:center;gap:10px;color:#c7d2e2;font-size:13px;margin-top:19px}.checkline input{accent-color:#aa98ff;width:17px;height:17px}.primary{background:#b9a8ff;color:#1b1830;border:0;font-weight:850;border-radius:13px;min-height:49px;padding:13px 20px}.primary:hover{background:#c8bcff}.secondary{background:#222e42;border:1px solid #3b4b65;color:#dfe6f4;border-radius:12px;padding:12px 15px}.wide{width:100%;margin-top:22px}.stats{display:grid;gap:15px}.stat{border-bottom:1px solid #2b374a;padding-bottom:15px}.stat:last-child{border:0;padding:0}.num{font-size:29px;font-weight:850;letter-spacing:-1px}.stat label{display:block;font-size:12px;color:#9caac0;margin-top:4px}.bar{height:8px;border-radius:20px;background:#263149;overflow:hidden;margin:15px 0}.bar>div{height:100%;background:linear-gradient(90deg,#8c75f3,#c1adff);width:0;transition:width .2s}.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.question{border:1px solid #34415b;border-radius:18px;background:linear-gradient(140deg,#202944,#1a2536);padding:clamp(23px,5vw,40px);margin:22px 0}.question .eyebrow{margin-bottom:15px}.question strong{display:block;font-family:Georgia,serif;font-size:clamp(22px,4.6vw,33px);line-height:1.45;font-weight:500}.answer{width:100%;min-height:125px;resize:vertical;border-radius:13px;padding:16px;background:#0e1624;border:1px solid #3e4b63;color:#fff;outline:none;line-height:1.6}.answer:focus{border-color:#ae9bff;box-shadow:0 0 0 3px #ab98ff22}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px;align-items:center}.actions .primary{flex:1}.feedback{border-radius:13px;padding:17px;margin-top:18px;line-height:1.6}.good{background:#14372f;border:1px solid #337d60}.almost{background:#39301b;border:1px solid #9a7834}.bad{background:#3e242e;border:1px solid #a65c70}.feedback strong{display:block;margin-bottom:6px}.feedback small{display:block;color:#c8d1df;margin-top:8px}.tag{color:#beb0ff;font-size:12px;letter-spacing:1.2px;font-weight:800;text-transform:uppercase}.end{text-align:center;padding:25px 0}.end h2{font-size:32px}.gridstats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}.gridstats div{background:#1c2739;padding:15px;border-radius:13px;text-align:center}.gridstats strong{display:block;font-size:23px}.gridstats span{font-size:11px;color:#aab6c9}.hidden{display:none!important}.foot{margin-top:24px;text-align:center;font-size:12px;color:#8494af}.foot a{color:#c6b9ff}.review{margin-top:16px;max-height:340px;overflow:auto}.review-item{padding:12px 0;border-bottom:1px solid #33405a}.review-item:last-child{border:0}.review-item b{font-size:13px}.review-item p{margin:5px 0;font-size:13px;color:#b7c4d9}.toggle{display:inline-flex;align-items:center;gap:7px;margin-top:15px;color:#d6c8ff;font-size:12px}.catalog-item{padding:14px 0;border-bottom:1px solid #2a3750}.catalog-item strong{font:18px Georgia,serif}.catalog-item p{font-size:13px;color:#b2c0d3;line-height:1.5;margin:5px 0 0}.catalog{max-height:500px;overflow:auto}.filters{display:flex;gap:8px;margin-bottom:12px}.filters input{flex:1;min-width:0;background:#0d1523;border:1px solid #374760;border-radius:11px;padding:12px;color:#fff}.keyboard{font-size:12px;color:#9ba9be;margin-top:10px}@media(max-width:690px){.layout{grid-template-columns:1fr}.top{margin-bottom:28px}.shell{width:min(100% - 26px,920px);padding-top:16px}.panel{padding:19px}.choice{gap:7px}.choice button{padding:11px 8px;font-size:12px;min-height:85px}.question{margin:15px 0}.question strong{font-size:25px}.pill{font-size:11px}.hero{margin-bottom:18px}.stats{grid-template-columns:repeat(3,1fr);gap:4px}.stat{border:0;border-right:1px solid #2a3851;padding:0 8px}.stat:last-child{border:0}.num{font-size:23px}}@media(max-width:355px){.choice{grid-template-columns:1fr}.choice button{min-height:50px}.choice button span{display:inline;margin-left:5px}}
 </style></head><body><main class="shell"><header class="top"><div class="brand"><div class="logo">L</div><span>LexLab <span style="color:#8d9bb3;font-weight:400">/ Paremie</span></span></div><span class="pill" id="topstat">TRENING PRAWNICZY</span></header>
-<section class="hero"><div class="eyebrow">MEMORIA · REPETITIO · LEX</div><h1>Łacina, którą<br>zapamiętasz.</h1><p>Ucz się paremii prawniczych, wpisując pełne sentencje. Ćwicz w obu kierunkach i obserwuj postęp.</p></section>
-<div id="home" class="layout"><section class="panel"><h2 class="card-title">Nowa sesja</h2><span class="label">KIERUNEK TŁUMACZENIA</span><div class="choice" id="modes"><button class="active" data-mode="pl-la">PL → LA<span>Na łacinę</span></button><button data-mode="la-pl">LA → PL<span>Na polski</span></button><button data-mode="mix">MIX<span>Oba kierunki</span></button></div><span class="label">LICZBA PYTAŃ</span><div class="selection" id="counts"><button data-count="10" class="active">10</button><button data-count="20">20</button><button data-count="35">35</button><button data-count="all">Wszystkie</button></div><label class="checkline"><input id="mistakesOnly" type="checkbox"> Ćwicz tylko poprzednio błędne</label><label class="checkline"><input id="strict" type="checkbox"> Dokładne sprawdzanie (bez tolerancji literówek)</label><button id="start" class="primary wide">Rozpocznij trening →</button><button id="catalogBtn" class="secondary wide" style="margin-top:10px">Przeglądaj bazę sentencji</button></section><aside class="panel"><h2 class="card-title">Twoje statystyki</h2><div class="stats"><div class="stat"><div class="num" id="total">0</div><label>Udzielonych odpowiedzi</label></div><div class="stat"><div class="num" id="accuracy">0%</div><label>Skuteczność łączna</label></div><div class="stat"><div class="num" id="best">0</div><label>Najlepsza seria</label></div></div><button class="secondary wide" id="resetStats">Wyzeruj statystyki</button></aside></div>
+<section class="hero"><div class="eyebrow">MEMORIA · REPETITIO · LEX</div><h1>Łacina, którą<br>zapamiętasz.</h1><p>Ucz się paremii prawniczych, wpisując pełne sentencje. Ćwicz w obu kierunkach i obserwuj postęp. Baza: wszystkie 58 paremii z przesłanego materiału UJ na 2026/27.</p></section>
+<div id="home" class="layout"><section class="panel"><h2 class="card-title">Nowa sesja</h2><span class="label">KIERUNEK TŁUMACZENIA</span><div class="choice" id="modes"><button class="active" data-mode="pl-la">PL → LA<span>Na łacinę</span></button><button data-mode="la-pl">LA → PL<span>Na polski</span></button><button data-mode="mix">MIX<span>Oba kierunki</span></button></div><span class="label">LICZBA PYTAŃ</span><div class="selection" id="counts"><button data-count="10" class="active">10</button><button data-count="20">20</button><button data-count="40">40</button><button data-count="all">Wszystkie</button></div><label class="checkline"><input id="mistakesOnly" type="checkbox"> Ćwicz tylko poprzednio błędne</label><label class="checkline"><input id="strict" type="checkbox"> Dokładne sprawdzanie (bez tolerancji literówek)</label><button id="start" class="primary wide">Rozpocznij trening →</button><button id="catalogBtn" class="secondary wide" style="margin-top:10px">Przeglądaj bazę sentencji</button></section><aside class="panel"><h2 class="card-title">Twoje statystyki</h2><div class="stats"><div class="stat"><div class="num" id="total">0</div><label>Udzielonych odpowiedzi</label></div><div class="stat"><div class="num" id="accuracy">0%</div><label>Skuteczność łączna</label></div><div class="stat"><div class="num" id="best">0</div><label>Najlepsza seria</label></div></div><button class="secondary wide" id="resetStats">Wyzeruj statystyki</button></aside></div>
 <section id="quiz" class="panel hidden"><div class="quiz-top"><div class="tag" id="direction">POLSKI → ŁACINA</div><div class="muted" id="progressText">1 / 10</div></div><div class="bar"><div id="progress"></div></div><div class="question"><div class="eyebrow">PRZETŁUMACZ SENTENCJĘ</div><strong id="prompt"></strong></div><label class="label" for="answer">TWOJA ODPOWIEDŹ</label><textarea id="answer" class="answer" placeholder="Wpisz pełną sentencję…" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea><div class="keyboard">Ctrl + Enter — sprawdź odpowiedź</div><div class="actions"><button id="check" class="primary">Sprawdź odpowiedź</button><button id="skip" class="secondary">Pomiń</button><button id="quit" class="secondary">Zakończ</button></div><div id="feedback" class="feedback hidden" aria-live="polite"></div><button id="next" class="primary wide hidden">Następne pytanie →</button><div class="gridstats"><div><strong id="score">0</strong><span>Punkty</span></div><div><strong id="streak">0</strong><span>Seria</span></div><div><strong id="correct">0</strong><span>Poprawne</span></div></div></section>
 <section id="summary" class="panel hidden"><div class="end"><div class="tag">SESJA ZAKOŃCZONA</div><h2>Podsumowanie treningu</h2><p class="muted" id="summaryLine"></p><div class="gridstats"><div><strong id="finalScore"></strong><span>Punkty</span></div><div><strong id="finalCorrect"></strong><span>Poprawne</span></div><div><strong id="finalPercent"></strong><span>Skuteczność</span></div></div><button id="again" class="primary">Nowa sesja</button></div><h3 class="card-title">Odpowiedzi do powtórki</h3><div id="review" class="review"></div></section>
 <section id="catalogView" class="panel hidden"><div class="quiz-top"><h2 class="card-title">Baza sentencji</h2><button id="catalogBack" class="secondary">Powrót</button></div><div class="filters"><input id="search" placeholder="Szukaj po łacinie lub polsku" aria-label="Szukaj paremii"></div><div class="muted" style="font-size:12px;margin:10px 0" id="catalogCount"></div><div id="catalog" class="catalog"></div></section>
-<footer class="foot">Treść sentencji na podstawie <a href="https://roman.law.uj.edu.pl/paremie-lacinskie/" target="_blank" rel="noopener">Katedry Prawa Rzymskiego UJ</a>. Postęp jest zapisywany lokalnie na tym urządzeniu.</footer></main><script>
+<footer class="foot">Źródło: „Capitulum Primum: Paremie i maksymy”, Koło Naukowe Prawa Rzymskiego i Porównawczego TBSP UJ (2026/27). 58 paremii, zgodnie z przesłanym PDF. Postęp jest zapisywany lokalnie na tym urządzeniu.</footer></main><script>
 window.PAREMIE = [
-["Accessio cedit principali","Rzecz przyłączona dzieli los rzeczy głównej."],
-["Actor sequitur forum rei","Powód idzie za sądem pozwanego."],
-["Audiatur et altera pars","Niech będzie wysłuchana i druga strona."],
-["Bis de eadem re agi non potest","Nie można procesować się dwa razy o to samo."],
-["Cessante ratione legis, cessat lex ipsa","Gdy ustaje przyczyna, dla której wydano ustawę, traci moc sama ustawa."],
-["Dura lex, sed lex","Twarde prawo, lecz prawo."],
-["Ei incumbit probatio, qui dicit non qui negat","Ciężar dowodu spoczywa na tym, kto twierdzi, a nie na tym, kto zaprzecza."],
-["Executio iuris non habet iniuriam","Egzekwowanie prawa nie jest bezprawiem."],
-["Heredis institutio caput et fundamentum totius testamenti est","Za początek i fundament całego testamentu uważa się ustanowienie dziedzica."],
-["Hereditas nihil aliud est, quam successio in universum ius, quod defunctus habuerit","Spadkobranie to nic innego, jak sukcesja w całości prawa, jakie miał zmarły."],
-["Hominum causa omne ius constitutum sit","Wszelkie prawo ustanawia się ze względu na ludzi."],
-["Ignorantia iuris nocet, ignorantia facti non nocet","Nieznajomość prawa szkodzi, nieznajomość faktu nie szkodzi."],
-["Impossibilium nulla obligatio est","Zobowiązanie do (świadczenia) niemożliwego jest nieważne."],
-["In dubiis benigniora","W sytuacjach dwuznacznych (należy przyjąć pogląd) bardziej korzystny (dla stron)."],
-["In dubio pro reo","W razie wątpliwości, na korzyść pozwanego."],
-["Iuris prudentia est divinarum atque humanarum rerum notitia, iusti atque iniusti scientia","Biegłość w prawie to znajomość rzeczy boskich i ludzkich oraz wiedza o tym, co sprawiedliwe i niesprawiedliwe."],
-["Ius civile vigilantibus scriptum est","Prawo cywilne tworzone jest dla osób starannych."],
-["Ius est ars boni et aequi","Prawo jest sztuką tego, co dobre i sprawiedliwe."],
-["Iustitia est constans et perpetua voluntas ius suum cuique tribuendi","Sprawiedliwość jest niezmienną i trwałą wolą przyznawania tego, co się komu należy."],
-["Iustitias vestras iudicabo","Osądzę waszą sprawiedliwość."],
-["Lex posterior derogat priori","Ustawa późniejsza uchyla wcześniejszą."],
-["Lex retro non agit","Ustawa nie działa wstecz."],
-["Male nostro iure uti non debemus","Nie powinniśmy źle korzystać z naszego prawa."],
-["Mater semper certa est, pater vero is est, quem nuptiae demonstrant","Matka jest zawsze pewna, ojcem zaś jest ten, na kogo wskazuje małżeństwo."],
-["Melior est conditio possidentis","Lepsze jest stanowisko tego, który posiada."],
-["Nasciturus pro iam nato habetur, quotiens de commodis eius agitur","Dziecko poczęte uważa się za już narodzone, ilekroć chodzi o jego korzyść."],
-["Nemo audiatur propriam turpitudinem allegans","Powołujący się na własny występek nie będzie wysłuchany."],
-["Nemo est iudex in propria causa","Nikt nie jest sędzią we własnej sprawie."],
-["Nemo plus iuris ad alium transferre potest, quam ipse haberet","Nikt nie może przenieść na drugiego więcej prawa, niż sam posiada."],
-["Nemo pro parte testatus, pro parte intestatus decedere potest","Nikt sam nie może umrzeć pozostawiając dziedzica do części spadku, część zaś beztestamentowo."],
-["Nemo sibi ipse causam possessionis mutare potest","Nikt nie może sobie zmienić podstawy posiadania."],
-["Non omne quod licet honestum est","Nie wszystko, co dozwolone, jest uczciwe."],
-["Nuptias non concubitus, sed consensus facit","Małżeństwo tworzy porozumienie, a nie faktyczne pożycie."],
-["Omnis definitio in iure civili periculosa est: parum est enim, ut non subverti posset","Wszelka definicja w prawie cywilnym jest niebezpieczna, ponieważ rzadko kiedy nie można jej podważyć."],
-["Pacta sunt servanda","Umów należy dotrzymywać."]
+[
+"Accessio cedit principali",
+"Rzecz przyłączona dzieli los rzeczy głównej."
+],
+[
+"Actor sequitur forum rei",
+"Powód idzie za sądem pozwanego"
+],
+[
+"Audiatur et altera pars",
+"Niech będzie wysłuchana i druga strona."
+],
+[
+"Bis de eadem re agi non potest",
+"Nie można procesować się dwa razy o to samo."
+],
+[
+"Cessante ratione legis, cessat lex ipsa",
+"Gdy ustaje przyczyna, dla której wydano ustawę, traci moc sama ustawa."
+],
+[
+"Dura lex, sed lex",
+"Twarde prawo, lecz prawo."
+],
+[
+"Ei incumbit probatio, qui dicit, non qui negat",
+"Ciężar dowodu spoczywa na tym, kto twierdzi, a nie na tym, kto zaprzecza."
+],
+[
+"Executio iuris non habet iniuriam",
+"Egzekwowanie prawa nie jest bezprawiem."
+],
+[
+"Heredis institutio caput et fundamentum totius testamenti est",
+"Za początek i fundament całego testamentu uważa się ustanowienie dziedzica."
+],
+[
+"Hereditas nihil aliud est, quam successio in universum ius, quod defunctus habuerit",
+"Spadkobranie to nic innego, jak sukcesja w całości prawa, jakie miał zmarły."
+],
+[
+"Hominum causa omne ius constitutum sit",
+"Wszelkie prawa stanowi się ze względu na ludzi."
+],
+[
+"Ignorantia iuris nocet, ignorantia facti non nocet",
+"Nieznajomość prawa szkodzi, nieznajomość faktów nie szkodzi."
+],
+[
+"Impossibilium nulla obligatio est",
+"Zobowiązanie do (świadczenia) niemożliwego jest nieważne."
+],
+[
+"In dubiis benigniora",
+"W sytuacjach dwuznacznych (należy przyjąć pogląd) bardziej korzystny (dla stron)."
+],
+[
+"In dubio pro reo",
+"W razie wątpliwości na korzyść pozwanego."
+],
+[
+"Iuris prudentia est divinarum atque humanarum rerum notitia, iusti atque iniusti scientia",
+"Biegłość w prawie to znajomość rzeczy boskich i ludzkich oraz wiedza o tym, co sprawiedliwe i niesprawiedliwe."
+],
+[
+"Ius civile vigilantibus scriptum est",
+"Prawo cywilne jest tworzone dla osob starannych."
+],
+[
+"Ius est ars boni et aequi",
+"Prawo jest sztuką tego, co dobre i sprawiedliwe."
+],
+[
+"Iustitia est constans et perpetua voluntas ius suum cuique tribuendi",
+"Sprawiedliwość jest niezmienną i trwałą wolą przyznawania tego, co komu się należy."
+],
+[
+"Iustitias vestras iudicabo",
+"Osądzę waszą sprawiedliwość."
+],
+[
+"Lex posterior derogat legi priori",
+"Ustawa późniejsza uchyla ustawę wcześniejszą."
+],
+[
+"Lex retro non agit",
+"Ustawa nie działa wstecz"
+],
+[
+"Male nostro iure uti non debemus",
+"Nie powinniśmy źle korzystać z naszego prawa"
+],
+[
+"Mater semper certa est, pater vero is est, quem nuptiae demonstrant",
+"Matka jest zawsze pewna, ojcem zaś jest ten, na kogo wskazuje małżeństwo"
+],
+[
+"Melior est condicio possidentis",
+"Lepsza jest pozycja tego, który posiada"
+],
+[
+"Nasciturus pro iam nato habetur quotiens de commodis eius agitur",
+"Dziecko poczęte uważa się za już narodzone, ilekroć chodzi o jego korzyść"
+],
+[
+"Nemo audiatur propriam turpitudinem allegans",
+"Powołujący się na własny występek nie będzie wysłuchany"
+],
+[
+"Nemo est iudex in propria causa",
+"Nikt nie jest sędzią we własnej sprawie"
+],
+[
+"Nemo plus iuris ad alium transferre potest, quam ipse haberet",
+"Nikt nie może przenieść na drugiego więcej praw, niż sam posiada"
+],
+[
+"Nemo pro parte testatus, pro parte intestatus decedere potest",
+"Nikt nie może umrzeć pozostawiając dziedzica do części spadku, część zaś beztestamentowo"
+],
+[
+"Nemo sibi ipse causam possessionis mutare potest",
+"Nikt nie może sobie zmienić podstawy posiadania"
+],
+[
+"Non omne, quod licet, honestum est",
+"Nie wszystko, co dozwolone, jest uczciwe"
+],
+[
+"Nuptias non concubitus, sed consensus facit",
+"Małżeństwo powstaje przez porozumienie, a nie faktyczne pożycie"
+],
+[
+"Omnis definitio in iure civili periculosa est: parum est enim, ut non subverti posset",
+"Wszelka definicja jest w prawie cywilnym niebezpieczna, gdyż rzadko kiedy nie można jej podważyć"
+],
+[
+"Pacta sunt servanda",
+"Umów należy dotrzymywać"
+],
+[
+"Prior tempore, potior iure",
+"Pierwszy w czasie, lepszy w prawie"
+],
+[
+"Qui tacet, consentire videtur",
+"Milczenie oznacza zgodę"
+],
+[
+"Quis custodiet ipsos custodet?",
+"Kto upilnuje samych strażników?"
+],
+[
+"Quod ab initio vitiosum est, non potest tractu temporis convalescere",
+"Co od początku jest wadliwe, nie może być uzdrowione przez upływ czasu"
+],
+[
+"Quod omnes similiter tangit, ab omnibus comprobetur",
+"Co wszystkich podobnie dotyczy, przez wszystkich winno być zatwierdzone"
+],
+[
+"Quod principi placuit, legis habet vigorem",
+"Co podoba się cesarzowi, zyskuje moc prawa"
+],
+[
+"Quot generationes, tot gradus",
+"Ile urodzeń, tyle stopni"
+],
+[
+"Reformatio in peius iudici appellato non licet",
+"Sędziemu apelacyjnemu nie wolno zmieniać (wyroku) na niekorzyść (odwołującego się)."
+],
+[
+"Salus populi suprema lex esto",
+"Dobro ludu niechaj będzie najwyższym prawem."
+],
+[
+"Scire leges non hoc est verba earum tenere, sed vim ac potestatem",
+"Znać prawa nie znaczy trzymać się słów ustaw, lecz ich treści i mocy działania"
+],
+[
+"Semel heres, semper heres",
+"Kto raz został spadkobiercą, jest nim na zawsze"
+],
+[
+"Sensum, non verba spectamus",
+"Patrzymy na sens, nie na słowa"
+],
+[
+"Sententia ius facit inter partes",
+"Wyrok tworzy prawo między stronami"
+],
+[
+"Summum ius, summa iniuria",
+"Najwyższe prawo, najwyższym bezprawiem."
+],
+[
+"Superficies solo cedit",
+"To, co znajduje się na powierzchni gruntu, staje się jego częścią składową."
+],
+[
+"Testamentum ambulatoria est enim voluntas defuncti usque ad vitae supremum exitum",
+"Testament zmienną jest bowiem wolą zmarłego aż do samego kresu życia."
+],
+[
+"Testis unus testis nullus",
+"Jeden świadek, żaden świadek."
+],
+[
+"Tres faciunt collegium",
+"Trzech tworzy stowarzyszenie."
+],
+[
+"Vanae voces populi non sunt audiendae",
+"Nie należy dawać posłuchu czczym głosom ludu."
+],
+[
+"Venire contra factum proprium nemini licet",
+"Nie wolno występować przeciw temu, co wynika z własnych czynów."
+],
+[
+"Vim vi repellere licet",
+"Siłę wolno odeprzeć siłą."
+],
+[
+"Vis maior, cui humana infirmitas resistere non potest",
+"Siła wyższa, której słabość ludzka nie jest w stanie się oprzeć."
+],
+[
+"Volenti non fit iniuria",
+"Chcącemu nie dzieje się krzywda."
+]
 ];
 
 </script><script>
@@ -50,9 +247,9 @@ window.PAREMIE = [
 const $=id=>document.getElementById(id);
 const all=window.PAREMIE.map(([la,pl],id)=>({id,la,pl}));
 const base={answered:0,correct:0,best:0,wrong:[]};
-let saved;try{saved={...base,...JSON.parse(localStorage.getItem('lexlab-v1')||'{}')}}catch{saved={...base}};
+let saved;try{saved={...base,...JSON.parse(localStorage.getItem('lexlab-uj-202627-pdf-v2')||'{}')}}catch{saved={...base}};
 let mode='pl-la',limit=10,deck=[],idx=0,points=0,streak=0,right=0,finished=false,history=[],currentDirection='pl-la';
-const persist=()=>{try{localStorage.setItem('lexlab-v1',JSON.stringify(saved))}catch{}};
+const persist=()=>{try{localStorage.setItem('lexlab-uj-202627-pdf-v2',JSON.stringify(saved))}catch{}};
 const normalize=s=>(s||'').toLocaleLowerCase('pl').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/ł/g,'l').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
 function levenshtein(a,b){const v=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let old=v[0];v[0]=i;for(let j=1;j<=b.length;j++){const temp=v[j];v[j]=Math.min(v[j]+1,v[j-1]+1,old+(a[i-1]===b[j-1]?0:1));old=temp}}return v[b.length]}
 function grade(user,expected){const a=normalize(user),b=normalize(expected);if(!a)return 'wrong';if(a===b)return 'exact';if($('strict').checked)return 'wrong';const distance=levenshtein(a,b);const similarity=1-distance/Math.max(a.length,b.length);return similarity>=.94&&distance<=Math.max(2,Math.floor(b.length*.07))?'near':'wrong'}
